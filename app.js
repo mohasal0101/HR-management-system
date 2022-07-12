@@ -1,5 +1,4 @@
-                  window.alert("Welcome to the Employee Management System");
-                  window.alert("You can refresh for updated information");
+             
                   function Employee ( imageUrl,FullName, Department, Level, EmployeeID, Salary) {
                         this.name = EmployeeID;
                         this.fullName = FullName;
@@ -89,7 +88,22 @@
        
         
       
-
+        Employee.prototype.card = function () {
+            document.write(`<div class="card">
+            <div class="card-body">
+                
+                <h5 class="card-title">${this.fullName}</h5>
+                <p class="card-text">${this.department}</p>
+                <p class="card-text">${this.level}</p>
+                <p class="card-text">${this.salary}</p>
+                <img src="${this.imageUrl}">
+               
+            </div>
+        </div>`);
+        }
+        for(let i = 0; i < employees.length; i++) {
+            employees[i].card();
+        }
         
 
         
