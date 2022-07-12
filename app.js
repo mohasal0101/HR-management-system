@@ -1,9 +1,9 @@
-                    function Employee ( ImageUrl,FullName, Department, Level, EmployeeID, Salary) {
+                    function Employee ( imageUrl,FullName, Department, Level, EmployeeID, Salary) {
                         this.name = EmployeeID;
                         this.fullName = FullName;
                         this.department = Department;
                         this.level = Level;
-                        this.ImageUrl = ImageUrl;
+                        this.imageUrl = imageUrl;
                         this.salary = Salary;
                         this.generateId = generateId();
                     
@@ -92,7 +92,7 @@
                 <p class="card-text">${this.department}</p>
                 <p class="card-text">${this.level}</p>
                 <p class="card-text">${this.salary}</p>
-                <img  src="${this.ImageUrl}">
+                <img  src="${this.imageUrl}">
                
             </div>
         </div>`);
