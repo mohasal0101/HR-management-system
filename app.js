@@ -1,11 +1,9 @@
-
-              
-                    function Employee ( ImageUrl,FullName, Department, Level, EmployeeID, Salary) {
+                    function Employee ( imageUrl,FullName, Department, Level, EmployeeID, Salary) {
                         this.name = EmployeeID;
                         this.fullName = FullName;
                         this.department = Department;
                         this.level = Level;
-                        this.imageUrl = ImageUrl;
+                        this.imageUrl = imageUrl;
                         this.salary = Salary;
                         this.generateId = generateId();
                     
@@ -17,12 +15,12 @@
         
         //create a new object
         
-        const Employee1 = new Employee ("../img/Ghazi.jpg",generateId(),'Ghazi Samer', Level[2], Department[2],  '$10000');
-        const Employee2 = new Employee ("../img/Lana.jpg",generateId(),'Lana Ali',     Level[2], Department[1], '$2000');
-        const Employee3 = new Employee ("../img/Tamara.jpg",generateId(),'Tamara Ayoub',Level[2],Department[2],'$3000');
-        const Employee4 = new Employee ("../img/Safi.jpg",generateId(), 'Safi Walid',  Level[1], Department[0], '$4000');
-        const Employee5 = new Employee ("../img/Rana.jpg",generateId(), 'Rana Saleh',  Level[0], Department[0], '$5000');
-        const Employee6 = new Employee ("../img/Hadi.jpg",generateId(), 'Hadi Ahmad',  Level[1], Department[0], '$6000');
+        const Employee1 = new Employee ("https://github.com/LTUC/new-prep-course-std/blob/main/Day10/Task/assets/Ghazi.jpg?raw=true",generateId(),'Ghazi Samer', Level[2], Department[2],  '$10000');
+        const Employee2 = new Employee ("https://github.com/LTUC/new-prep-course-std/blob/main/Day10/Task/assets/Lana.jpg?raw=true",generateId(),'Lana Ali',     Level[2], Department[1], '$2000');
+        const Employee3 = new Employee ("https://github.com/LTUC/new-prep-course-std/blob/main/Day10/Task/assets/Tamara.jpg?raw=true",generateId(),'Tamara Ayoub',Level[2],Department[2],'$3000');
+        const Employee4 = new Employee ("img/Safi.jpg",generateId(), 'Safi Walid',  Level[1], Department[0], '$4000');
+        const Employee5 = new Employee ("img/Rana.jpg",generateId(), 'Rana Saleh',  Level[0], Department[0], '$5000');
+        const Employee6 = new Employee ("img/Hadi.jpg",generateId(), 'Hadi Ahmad',  Level[1], Department[0], '$6000');
         
         
         console.log(Employee1);
@@ -86,22 +84,10 @@
         console.log("----------------------------------------")
         
         
-        Employee.prototype.card = function () {
-            document.write(`<div class="card">
-            <div class="card-body">
-                <img src="${this.imageUrl}" alt="">
-                <h5 class="card-title">${this.fullName}</h5>
-                <p class="card-text">${this.department}</p>
-                <p class="card-text">${this.level}</p>
-                <p class="card-text">${this.salary}</p>
-               
-            </div>
-        </div>`);
-        }
-        for(let i = 0; i < employees.length; i++) {
-            employees[i].card();
-        }
+       
         
+      
+
         
 
         
