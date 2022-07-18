@@ -1,5 +1,6 @@
              
-                  function Employee ( imageUrl,FullName, Department, Level, EmployeeID, Salary) {
+                 
+                 function Employee ( imageUrl,FullName, Department, Level, EmployeeID, Salary) {
                         this.name = EmployeeID;
                         this.fullName = FullName;
                         this.department = Department;
@@ -13,6 +14,26 @@
         
         const Department = ['IT', 'HR', 'Sales'];
         const Level = ['Junior', 'Mid-Senior', 'Senior'];
+        
+        let employeeDiv = document.getElementById("Employee");
+
+        Employee.prototype.card = function () {
+            let div1 = document.createElement("div");
+
+            div1.innerHTML=`
+            <div class="card">     
+                <h5 class="fullName">${this.fullName}</h5>
+                <p class="card-text">${this.department}</p>
+                <p class="card-text">${this.level}</p>
+                <p class="card-text">${this.salary}</p>
+                <img src="${this.imageUrl}">
+        </div>`;
+        div1.className = "div1";
+        employeeDiv.appendChild(div1);
+    }
+    
+        
+        
         
         //create a new object
         
@@ -88,23 +109,6 @@
        
         
       
-        Employee.prototype.card = function () {
-            document.write(`<div class="card">
-            <div class="card-body">
-                
-                <h5 class="card-title">${this.fullName}</h5>
-                <p class="card-text">${this.department}</p>
-                <p class="card-text">${this.level}</p>
-                <p class="card-text">${this.salary}</p>
-                <img src="${this.imageUrl}">
-               
-            </div>
-        </div>`);
-        }
-        for(let i = 0; i < employees.length; i++) {
-            employees[i].card();
-        }
-        
 
         
         
